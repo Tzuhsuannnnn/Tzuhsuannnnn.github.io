@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>final exam</title>
+		<link rel="stylesheet" href="finalCSS.css">
+		<meta name="keywords" content="NCU,HTML5,web">
+		<meta name="author" content="魏慈萱 110403505">
+	</head>
+	<body>
+		
+        <h2>rate exchange</h2>
+        <label>enter the amount you want to exchange in NTD</label>
+        <img src ="rate.png" alt= "rate.pic" width="100" height="100">
+
+        <form id="rate">
+
+        <input id ="NTD" type="text" value=""/>
+		
+		
+        <button type="button" class="button1" onclick="myFunction_submit()">submit</button>
+        
+        <input type="button" class="button1" onclick="myFunction_reset()" value="reset ">
+
+
+        
+   
+        
+
+		<!--CSS showRate搭配CSS color變色-->
+		<div id="showRate">
+			
+            
+            <p id ="USD"></p>
+            <p id ="EUR"></p>
+            <p id ="JPY"></p>
+            <p id ="KRW"></p>
+            <p id ="AUD"></p>
+            
+		</div>
+        </form>
+
+		<script>
+
+            //myFunction_submit
+            function myFunction_submit(){
+                var result="";
+                var NTD = parseInt(document.getElementById('NTD').value);
+                var USD = NTD/30.965;
+                var EUR = NTD/33.46;
+                var JPY = NTD/0.2219;
+                var KRW = NTD/0.02535;
+                var AUD = NTD/20.47;
+                usd="USD: "+USD.toFixed(2);
+                eur="EUR: "+EUR.toFixed(2);
+                jpy="JPY: "+JPY.toFixed(2);
+                krw="KRW: "+KRW.toFixed(2);
+                aud="AUD: "+AUD.toFixed(2);
+        
+                document.getElementById("USD").innerHTML=usd;
+                document.getElementById("EUR").innerHTML=eur;
+                document.getElementById("JPY").innerHTML=jpy;
+                document.getElementById("KRW").innerHTML=krw;
+                document.getElementById("AUD").innerHTML=aud;
+
+                //check
+                if(parseInt(document.getElementById('NTD').value)==0||parseInt(document.getElementById('NTD').value)<0){
+                    alert("please enter again");
+                    myFunction_reset();
+                }
+            }
+
+
+            //myFunction_reset
+            function myFunction_reset(){
+
+                document.getElementById("rate").reset();
+                document.getElementById("USD").innerHTML="";
+                document.getElementById("EUR").innerHTML="";
+                document.getElementById("JPY").innerHTML="";
+                document.getElementById("KRW").innerHTML="";
+                document.getElementById("AUD").innerHTML="";
+
+                
+
+
+            }
+
+         
+
+
+
+
+        </script>
+
+
+
+	</body>
+</html>
