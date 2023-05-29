@@ -1,0 +1,30 @@
+body{
+    background:-webkit-linear-gradient(-8deg,rgb(255,255,255),rgb(255,204,204))
+}
+h2{
+    font-family: "Arial", sans-serif;
+    font-style: oblique;
+    color: darkred;
+}
+
+#showRate{
+    background-color:darkred;
+    color:white;
+    background-size: 200*100;
+
+}
+
+
+img{
+    width:500px;
+    height:400px;
+    float:right;
+    border:5px solid darkred;
+}
+
+.button1 {
+    background-color:darkred;
+    color:white;
+
+}
+
